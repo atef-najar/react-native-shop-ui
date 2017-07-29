@@ -30,6 +30,10 @@ It works well with both IOS and Android.
 2. Navigate to the main Shop folder and run `npm install`
 3. Run `react-native run-ios` or `react-native run-android` to test on your emulator or on your device
 
+## Download a demo
+
+> You can download the demo APK by [Clicking here](https://www.dropbox.com/s/42l8vvq61xx6bzh/shop.apk "Download Shop APK") 
+
 ## Documentation 
 
 > ### Coming soon
