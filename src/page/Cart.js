@@ -4,7 +4,7 @@
 
 // React native and others libraries imports
 import React, { Component } from 'react';
-import { Alert } from 'react-native';
+import { Alert, AsyncStorage } from 'react-native';
 import { Container, Content, View, Header, Icon, Button, Left, Right, Body, Title, List, ListItem, Thumbnail, Grid, Col } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
@@ -22,7 +22,10 @@ export default class Cart extends Component {
   }
 
   componentWillMount() {
-    this.setState({cartItems: items});
+    AsyncStorage.getItem("CART", (err, res) => {
+      if (!res) this.setState({cartItems: []});
+      else this.setState({cartItems: JSON.parse(res)});
+    });
   }
 
   render() {
@@ -71,7 +74,7 @@ export default class Cart extends Component {
     this.state.cartItems.map((item, i) => {
       items.push(
         <ListItem
-          key={item.id}
+          key={i}
           last={this.state.cartItems.length === i+1}
           onPress={() => this.itemClicked(item)}
         >
@@ -82,7 +85,8 @@ export default class Cart extends Component {
               {item.title}
             </Text>
             <Text style={{fontSize: 16, fontWeight: 'bold', marginBottom: 10}}>{item.price}</Text>
-            <Text style={{fontSize: 14 ,fontStyle: 'italic'}}>{item.categoryTitle}</Text>
+            <Text style={{fontSize: 14 ,fontStyle: 'italic'}}>Color: {item.color}</Text>
+            <Text style={{fontSize: 14 ,fontStyle: 'italic'}}>Size: {item.size}</Text>
           </Body>
           <Right>
             <Button style={{marginLeft: -25}} transparent onPress={() => this.removeItemPressed(item)}>
@@ -109,10 +113,11 @@ export default class Cart extends Component {
   removeItem(itemToRemove) {
     let items = [];
     this.state.cartItems.map((item) => {
-      if(item.id !== itemToRemove.id)
+      if(JSON.stringify(item) !== JSON.stringify(itemToRemove) )
         items.push(item);
     });
     this.setState({cartItems: items});
+    AsyncStorage.setItem("CART",JSON.stringify(items));
   }
 
   removeAllPressed() {
@@ -128,6 +133,7 @@ export default class Cart extends Component {
 
   removeAll() {
     this.setState({cartItems: []})
+    AsyncStorage.setItem("CART",JSON.stringify([]));
   }
 
   checkout() {

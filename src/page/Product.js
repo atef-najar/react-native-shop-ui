@@ -4,8 +4,8 @@
 
 // React native and others libraries imports
 import React, { Component } from 'react';
-import { Image, Dimensions, TouchableWithoutFeedback } from 'react-native';
-import { View, Container, Content, Button, Left, Right, Icon, Picker, Item, Grid, Col, Text as NBText } from 'native-base';
+import { Image, Dimensions, TouchableWithoutFeedback, AsyncStorage } from 'react-native';
+import { View, Container, Content, Button, Left, Right, Icon, Picker, Item, Grid, Col, Toast, Text as NBText } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 
@@ -37,8 +37,8 @@ export default class Product extends Component {
 
   componentDidMount() {
     /* Select the default color and size (first ones) */
-    let defColor = this.state.product.color[0];
-    let defSize = this.state.product.size[0];
+    let defColor = this.state.product.colors[0];
+    let defSize = this.state.product.sizes[0];
     this.setState({
       selectedColor: defColor,
       selectedSize: defSize
@@ -206,7 +206,7 @@ export default class Product extends Component {
 
   renderColors() {
     let colors = [];
-    this.state.product.color.map((color, i) => {
+    this.state.product.colors.map((color, i) => {
       colors.push(
         <Item key={i} label={color} value={color} />
       );
@@ -216,7 +216,7 @@ export default class Product extends Component {
 
   renderSize() {
     let size = [];
-    this.state.product.size.map((s, i) => {
+    this.state.product.sizes.map((s, i) => {
       size.push(
         <Item key={i} label={s} value={s} />
       );
@@ -253,11 +253,68 @@ export default class Product extends Component {
   }
 
   addToCart() {
-    alert(this.state.quantity+'*'+this.state.product.id+' '+this.state.selectedColor+' '+this.state.selectedSize);
+    var product = this.state.product;
+    product['color'] = this.state.selectedColor;
+    product['size'] = this.state.selectedSize;
+    product['quantity'] = this.state.quantity;
+    AsyncStorage.getItem("CART", (err, res) => {
+      if(!res) AsyncStorage.setItem("CART",JSON.stringify([product]));
+      else {
+        var items = JSON.parse(res);
+        items.push(product);
+        AsyncStorage.setItem("CART",JSON.stringify(items));
+      }
+      Toast.show({
+        text: 'Product added to your cart !',
+        position: 'bottom',
+        type: 'success',
+        buttonText: 'Dismiss',
+        duration: 3000
+      });
+    });
   }
 
   addToWishlist() {
-    alert(this.state.product.id);
+    var product = this.state.product;
+    var success = true;
+    AsyncStorage.getItem("WISHLIST", (err, res) => {
+      if(!res) AsyncStorage.setItem("WISHLIST",JSON.stringify([product]));
+      else {
+        var items = JSON.parse(res);
+        if(this.search(items, product)) {
+          success = false
+        }
+        else {
+          items.push(product);
+          AsyncStorage.setItem("WISHLIST",JSON.stringify(items));
+        }
+      }
+      if(success) {
+        Toast.show({
+          text: 'Product added to your wishlist !',
+          position: 'bottom',
+          type: 'success',
+          buttonText: 'Dismiss',
+          duration: 3000
+        });
+      }
+      else {
+        Toast.show({
+          text: 'This product already exist in your wishlist !',
+          position: 'bottom',
+          type: 'danger',
+          buttonText: 'Dismiss',
+          duration: 3000
+        });
+      }
+    });
+  }
+
+  search(array, object) {
+    for(var i=0; i<array.length; i++)
+      if(JSON.stringify(array[i]) === JSON.stringify(object))
+        return true;
+    return false;
   }
 
 }
@@ -266,6 +323,7 @@ const dummyProduct = {
   id: 2,
   title: 'V NECK T-SHIRT',
   description: "Pellentesque orci lectus, bibendum iaculis aliquet id, ullamcorper nec ipsum. In laoreet ligula vitae tristique viverra. Suspendisse augue nunc, laoreet in arcu ut, vulputate malesuada justo. Donec porttitor elit justo, sed lobortis nulla interdum et. Sed lobortis sapien ut augue condimentum, eget ullamcorper nibh lobortis. Cras ut bibendum libero. Quisque in nisl nisl. Mauris vestibulum leo nec pellentesque sollicitudin. Pellentesque lacus eros, venenatis in iaculis nec, luctus at eros. Phasellus id gravida magna. Maecenas fringilla auctor diam consectetur placerat. Suspendisse non convallis ligula. Aenean sagittis eu erat quis efficitur. Maecenas volutpat erat ac varius bibendum. Ut tincidunt, sem id tristique commodo, nunc diam suscipit lectus, vel",
+  image: 'http://res.cloudinary.com/atf19/image/upload/c_crop,h_250,w_358,x_150/v1500465309/pexels-photo-206470_nwtgor.jpg',
   images: [
     'http://res.cloudinary.com/atf19/image/upload/c_crop,h_250,w_358,x_150/v1500465309/pexels-photo-206470_nwtgor.jpg',
     'http://res.cloudinary.com/atf19/image/upload/c_crop,h_250,x_226,y_54/v1500465309/pexels-photo-521197_hg8kak.jpg',
@@ -273,8 +331,9 @@ const dummyProduct = {
     'http://res.cloudinary.com/atf19/image/upload/c_crop,h_250/v1500465308/pexels-photo-179909_ddlsmt.jpg'
   ],
   price: '120$',
-  color: ['Red', 'Blue', 'Black'],
-  size: ['S', 'M', 'L', 'XL', 'XXL'],
+  colors: ['Red', 'Blue', 'Black'],
+  sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+  category: 'MAN',
   similarItems: [
     {id: 10, title: 'V NECK T-SHIRT', price: '29$', image: 'http://res.cloudinary.com/atf19/image/upload/c_crop,g_face,h_250,x_248/v1500465308/fashion-men-s-individuality-black-and-white-157675_wnctss.jpg'},
     {id: 11, title: 'V NECK T-SHIRT', price: '29$', image: 'http://res.cloudinary.com/atf19/image/upload/c_crop,h_250/v1500465308/pexels-photo-179909_ddlsmt.jpg'},

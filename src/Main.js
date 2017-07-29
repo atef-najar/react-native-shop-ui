@@ -5,6 +5,7 @@
 
 // React native and others libraries imports
 import React, { Component } from 'react';
+import { Root } from 'native-base';
 import { Scene, Router } from 'react-native-router-flux';
 
 
@@ -24,20 +25,22 @@ import ImageGallery from './page/ImageGallery';
 export default class Main extends Component {
   render() {
     return(
-      <Router>
-        <Scene key="root">
-          <Scene initial={true} key="home" component={Home} hideNavBar />
-          <Scene key="search" component={Search} modal hideNavBar />
-          <Scene key="cart" component={Cart} modal hideNavBar />
-          <Scene key="wishlist" component={WishList} modal hideNavBar />
-          <Scene key="map" component={Map} modal hideNavBar />
-          <Scene key="contact" component={Contact} modal hideNavBar />
-          <Scene key="newsletter" component={Newsletter} modal hideNavBar />
-          <Scene key="category" component={Category} hideNavBar />
-          <Scene key="product" component={Product} hideNavBar />
-          <Scene key="imageGallery" component={ImageGallery} modal hideNavBar />
-        </Scene>
-      </Router>
+      <Root>
+        <Router>
+          <Scene key="root">
+            <Scene initial={true} key="home" component={Home} hideNavBar />
+            <Scene key="search" component={Search} modal hideNavBar />
+            <Scene key="cart" component={Cart} modal hideNavBar />
+            <Scene key="wishlist" component={WishList} modal hideNavBar />
+            <Scene key="map" component={Map} modal hideNavBar />
+            <Scene key="contact" component={Contact} modal hideNavBar />
+            <Scene key="newsletter" component={Newsletter} modal hideNavBar />
+            <Scene key="category" component={Category} hideNavBar />
+            <Scene key="product" component={Product} hideNavBar />
+            <Scene key="imageGallery" component={ImageGallery} modal hideNavBar />
+          </Scene>
+        </Router>
+      </Root>
     );
   }
 
