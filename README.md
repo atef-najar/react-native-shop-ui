@@ -20,7 +20,7 @@ It works well with both IOS and Android.
 * Contact
 * Find us (A map)
 * *Login/Sign up* Coming soon
-* *Profile* Coming soon
+* *Profil* Coming soon
 * *Payment* Coming soon
 
 ## Installation
@@ -33,3 +33,7 @@ It works well with both IOS and Android.
 ## Documentation 
 
 > ### Coming soon
+
+## Documentation 
+
+> If you have any problem you can contact me at: **atef.najar@icloud.com**
