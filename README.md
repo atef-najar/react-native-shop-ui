@@ -32,22 +32,22 @@ It works well with both IOS and Android.
 
 ## Download a demo
 
-> You can download the demo APK by [Clicking here](https://www.dropbox.com/s/42l8vvq61xx6bzh/shop.apk "Download Shop APK") 
+> You can download the demo APK by [Clicking here](https://www.dropbox.com/s/42l8vvq61xx6bzh/shop.apk "Download Shop APK")
 
 ## Screenshots
 
-![alt text](http://res.cloudinary.com/atf19/image/upload/v1501416468/1_f6hiw0.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/v1501416464/2_rmuosc.png)
-![alt text](http://res.cloudinary.com/atf19/image/upload/v1501416466/3_xbithf.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/v1501416465/4_mz9us1.png)
-![alt text](http://res.cloudinary.com/atf19/image/upload/v1501416465/5_u7cedw.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/v1501416460/6_toto6s.png)
-![alt text](http://res.cloudinary.com/atf19/image/upload/v1501416470/7_h2onpd.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/v1501416468/8_zporkh.png)
-![alt text](http://res.cloudinary.com/atf19/image/upload/v1501416471/9_yk5qog.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/v1501416470/10_psx6ys.png)
-![alt text](http://res.cloudinary.com/atf19/image/upload/v1501416468/11_mxtfkz.png)
+![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416468/1_f6hiw0.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416464/2_rmuosc.png)
+![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416466/3_xbithf.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416465/4_mz9us1.png)
+![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416465/5_u7cedw.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416460/6_toto6s.png)
+![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416470/7_h2onpd.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416468/8_zporkh.png)
+![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416471/9_yk5qog.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416470/10_psx6ys.png)
+![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416468/11_mxtfkz.png)
 
 
-## Documentation 
+## Documentation
 
 > ### Coming soon
 
-## Documentation 
+## Documentation
 
 > If you have any problem you can contact me at: **atef.najar@icloud.com**
