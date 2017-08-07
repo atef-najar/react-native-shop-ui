@@ -278,6 +278,18 @@ var menuItems = [
 
 const menusSecondaryItems = [
   {
+    id: 190,
+    title: 'Login',
+    icon: 'ios-person',
+    key: 'login'
+  },
+  {
+    id: 519,
+    title: 'Signup',
+    icon: 'ios-person-add',
+    key: 'signup'
+  },
+  {
     id: 19,
     title: 'Wish List',
     icon: 'heart',

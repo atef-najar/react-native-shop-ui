@@ -13,8 +13,6 @@ import Carousel, { Pagination } from 'react-native-snap-carousel';
 import Colors from '../Colors';
 import Text from '../component/Text';
 import Navbar from '../component/Navbar';
-import SideMenu from '../component/SideMenu';
-import SideMenuDrawer from '../component/SideMenuDrawer';
 import {default as ProductComponent} from '../component/Product';
 
 export default class Product extends Component {

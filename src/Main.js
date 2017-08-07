@@ -20,6 +20,8 @@ import Contact from './page/Contact';
 import Category from './page/Category';
 import Product from './page/Product';
 import ImageGallery from './page/ImageGallery';
+import Login from './page/Login';
+import Signup from './page/Signup';
 
 
 export default class Main extends Component {
@@ -38,6 +40,8 @@ export default class Main extends Component {
             <Scene key="category" component={Category} hideNavBar />
             <Scene key="product" component={Product} hideNavBar />
             <Scene key="imageGallery" component={ImageGallery} modal hideNavBar />
+            <Scene key="login" component={Login} hideNavBar />
+            <Scene key="signup" component={Signup} hideNavBar />
           </Scene>
         </Router>
       </Root>
