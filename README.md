@@ -48,6 +48,6 @@ It works well with both IOS and Android.
 
 > ### Coming soon
 
-## Documentation
+## Contact
 
 > If you have any problem you can contact me at: **atef.najar@icloud.com**
