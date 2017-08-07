@@ -19,7 +19,7 @@ It works well with both IOS and Android.
 * Newsletter
 * Contact
 * Find us (A map)
-* *Login/Sign up* Coming soon
+* Login/Sign up
 * *Profil* Coming soon
 * *Payment* Coming soon
 
