@@ -23,7 +23,7 @@ export default class Navbar extends Component {
         noShadow={true}
         >
         {this.props.left ? this.props.left : <Left style={{flex: 1}} />}
-        <Body style={{flex:1, justifyContent: 'center', alignItems: 'center' }}>
+        <Body style={styles.body}>
           <Title style={styles.title}>{this.props.title}</Title>
         </Body>
         {this.props.right ? this.props.right : <Right style={{flex: 1}} />}
@@ -33,6 +33,11 @@ export default class Navbar extends Component {
 }
 
 const styles={
+  body: {
+    flex:1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   title: {
     fontFamily: 'Roboto',
     fontWeight: '100'

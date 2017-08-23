@@ -4,7 +4,6 @@
 
 // React native and others libraries imports
 import React, { Component } from 'react';
-import { Image } from 'react-native';
 import { Container, View, Left, Right, Button, Icon, Item, Input } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
@@ -48,7 +47,6 @@ export default class Login extends Component {
         <Navbar left={left} right={right} title="LOGIN" />
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', paddingLeft: 50, paddingRight: 50}}>
           <View style={{marginBottom: 35, width: '100%'}}>
-            <Image source={require('../component/logo.png')} style={{width: 40, height: 40, marginBottom: 7}}/>
             <Text style={{fontSize: 24, fontWeight: 'bold', textAlign: 'left', width: '100%', color: Colors.navbarBackgroundColor}}>Welcome back, </Text>
             <Text style={{fontSize: 18, textAlign: 'left', width: '100%', color: '#687373'}}>Login to continue </Text>
           </View>

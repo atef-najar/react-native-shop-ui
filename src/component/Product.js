@@ -18,8 +18,8 @@ export default class product extends Component {
       <Col style={this.props.isRight ? style.leftMargin : style.rightMargin}>
         <Card transparent>
             <CardItem cardBody>
-              <Button transparent style={{flex: 1, height: 250, paddingLeft: 4, paddingRight: 4}} onPress={() => this.pressed()}>
-                <Image source={{uri: this.props.product.image}} style={{height: 250, width: null, flex: 1}}/>
+              <Button transparent style={style.button} onPress={() => this.pressed()}>
+                <Image source={{uri: this.props.product.image}} style={style.image}/>
                 <View style={style.border} />
               </Button>
             </CardItem>
@@ -52,6 +52,8 @@ export default class product extends Component {
 }
 
 const style = {
+  button: {flex: 1, height: 250, paddingLeft: 4, paddingRight: 4},
+  image: {height: 250, width: null, flex: 1},
   leftMargin: {
     marginLeft: 7,
     marginRight: 0,
