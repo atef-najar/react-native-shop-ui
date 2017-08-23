@@ -33,7 +33,7 @@ export default class Contact extends Component {
     );
     return(
       <Container style={{backgroundColor: '#fdfdfd'}}>
-          <Navbar left={left} title="NEWSLETTER" />
+          <Navbar left={left} title="CONTACT" />
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', paddingLeft: 50, paddingRight: 50}}>
               <Item>
                   <Icon active name='ios-person-outline' />
