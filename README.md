@@ -20,8 +20,9 @@ It works well with both IOS and Android.
 * Contact
 * Find us (A map)
 * Login/Sign up
+* Payment
 * *Profil* Coming soon
-* *Payment* Coming soon
+
 
 ## Installation
 
@@ -41,7 +42,8 @@ It works well with both IOS and Android.
 ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416465/5_u7cedw.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416460/6_toto6s.png)
 ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416470/7_h2onpd.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416468/8_zporkh.png)
 ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416471/9_yk5qog.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416470/10_psx6ys.png)
-![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416468/11_mxtfkz.png)
+![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1501416468/11_mxtfkz.png) ![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1503520367/12_xwbj6w.png)
+![alt text](http://res.cloudinary.com/atf19/image/upload/c_scale,h_500/v1503520366/13_yca0zj.png)
 
 
 ## Documentation
