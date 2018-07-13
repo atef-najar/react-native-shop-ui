@@ -27,9 +27,24 @@ It works well with both IOS and Android.
 ## Installation
 
 > Follow these steps to install and test the app:
-1. Clone or download this repo
-2. Navigate to the main Shop folder and run `npm install`
-3. Run `react-native run-ios` or `react-native run-android` to test on your emulator or on your device
+
+```
+git clone git@github.com:ATF19/react-native-shop-ui.git
+cd react-native-shop-ui
+npm install
+```
+
+> For iOS users:
+
+```
+react-native run-ios
+```
+
+> For Android users
+
+```
+react-native run-android
+```
 
 ## Download a demo
 
