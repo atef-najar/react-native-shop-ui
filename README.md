@@ -21,7 +21,9 @@ It works well with both IOS and Android.
 * [Find us (A map)](./src/page/Map.js)
 * [Login](./src/page/Login.js)/[Sign up](./src/page/Signup.js)
 * [Payment](./src/page/Checkout.js)
-* *Profil* Coming soon
+
+### Coming Soon
+* Profile
 
 
 ## Installation
