@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "native-base": "2.7.2",
+    "native-base": "2.8.0",
     "react": "16.4.1",
     "react-native": "0.56.0",
     "react-native-drawer": "^2.5.0",
