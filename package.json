@@ -9,7 +9,7 @@
   "dependencies": {
     "native-base": "2.7.2",
     "react": "16.4.1",
-    "react-native": "0.56.0",
+    "react-native": "0.57.0",
     "react-native-drawer": "^2.5.0",
     "react-native-image-gallery": "2.1.5",
     "react-native-maps": "0.21.0",
